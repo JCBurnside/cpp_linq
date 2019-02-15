@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.12.1 )
+include(GoogleTest)
+include_directories(../Linq)
+add_executable(Linq_Tests AggregateTests.cpp)
+target_link_libraries(Linq_Tests gtest_main)
+gtest_discover_tests(Linq_Tests)
